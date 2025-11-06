@@ -1,0 +1,153 @@
+:root {
+	--text: #4d312d;
+	--backgroundColor: var(--containerColor);
+	--containerColor: #e0c0b9;
+	--containerColor2: #723b4e;
+	--borderColor: #723b4e;
+	--accentColor: #B55468;
+	--accentColor2: #893567;
+	--accentColor3: #C25E25;
+	--accentColor4: #F48067;
+	--accentColor5: #FDB9B2;
+}
+
+html {
+	color: var(--text);
+	font-family: 'Times New Roman', Times, serif;
+	font-size: clamp(1rem, 0.5vw, 2.5rem);
+}
+
+body {
+	background-image: url('path/to/your/image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-color: var(--backgroundColor);
+}
+
+.container {
+	max-width: 60em;
+	min-width: 50em;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 13em minmax(0, 1fr) 13em;
+	background: var(--containerColor);
+}
+
+.box {
+	padding: .5em;
+	border-bottom: 1px dotted var(--borderColor);
+}
+
+.activity {
+	display: grid;
+	grid-template-columns: 1.5em minmax(0, 1fr);
+}
+
+header {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+}
+
+.asideone {
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+	height: max-content;
+	border-right: 1px dotted var(--borderColor);
+}
+
+.asidetwo {
+	grid-row: 2 / 3;
+	grid-column: 3 / 4;
+	height: max-content;
+	border-left: 1px dotted var(--borderColor);
+}
+
+main {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+	height: max-content;
+}
+
+footer {
+	grid-row: 3 / 4;
+	grid-column: 1 / 4;
+}
+
+marquee {
+	height: 20px;
+	border-bottom: 1px dotted var(--borderColor);
+}
+
+span.sidetitle {
+	clear: both;
+	display: block;
+	color: var(--text);
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px dotted var(--borderColor);
+	padding: 5px;
+}
+
+div.anime {
+	color: var(--text);
+	font-size: smaller;
+	text-align: left;
+	grid-column: 2 / 3;
+}
+
+div.right-header {
+	box-sizing: border-box;
+	display: flex;
+	position: sticky;
+	top: 0px;
+}
+
+.right-header .nav-link {
+	width: auto;
+	border-right: 1px dotted var(--borderColor);
+	border-bottom: 1px dotted var(--borderColor);
+	color: var(--accentColor5);
+	text-decoration: none;
+	text-align: center;
+	width: 100%;
+}
+
+a:link, a:visited {
+	color: var(--accentColor);
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: var(--accentColor2);
+	text-decoration: none;
+}
+
+img.animecover {
+	width: 90%;
+	height: auto;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-radius: 10px;
+}
+
+img.icon {
+	width: 80%;
+	margin: 10%;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	border-radius: 15px;
+	border: 3px solid var(--borderColor);
+}
+
+span.icon {
+	clear: both;
+	display: block;
+	text-align: center;
+	margin-top: 2px;
+	color: var(--accentColor);
+}
