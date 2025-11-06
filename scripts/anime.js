@@ -32,15 +32,15 @@ function handleData(data) {
         var siteUrl = activity.media.siteUrl;
 
         if(status == 'watched episode') {
-            anime = `<a href="${siteUrl}" target="_blank"><img class="animecover" src="${coverImage}" alt="${title}"></a>${title} ep ${activity.progress}`;
+            anime = `<a class="animetitle" href="${siteUrl}" target="_blank">${title}</a> ep ${activity.progress}`;
 
-            console.log(activity)
+            // console.log(activity)
             document.getElementById('anime').innerHTML = anime;
             break;
         } else if(status == 'completed') {
-            anime = `<a href="${siteUrl}" target="_blank"><img class="animecover" src="${coverImage}" alt="${title}"></a>finished ${title}!`;
+            anime = `finished <a class="animetitle" href="${siteUrl}" target="_blank">${title}</a>!`;
 
-            console.log(activity)
+            // console.log(activity)
             document.getElementById('anime').innerHTML = anime;
             break;
         }
@@ -114,5 +114,3 @@ function handleError(error) {
     document.getElementById('anime').innerHTML = "iunno :(";
     console.error(error);
 }
-
-module.exports = { fetchFromAnilist };

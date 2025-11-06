@@ -1,6 +1,6 @@
 :root {
 	--text: #4d312d;
-	--backgroundColor: #fff;
+	--backgroundColor: var(--containerColor);
 	--containerColor: #e0c0b9;
 	--containerColor2: #723b4e;
 	--borderColor: #723b4e;
@@ -32,12 +32,17 @@ body {
 	margin: auto;
 	display: grid;
 	grid-template-columns: 13em minmax(0, 1fr) 13em;
+	background: var(--containerColor);
 }
 
 .box {
 	padding: .5em;
-	background: var(--containerColor);
 	border-bottom: 1px dotted var(--borderColor);
+}
+
+.activity {
+	display: grid;
+	grid-template-columns: 1.5em minmax(0, 1fr);
 }
 
 header {
@@ -50,13 +55,13 @@ header {
 	grid-column: 1 / 2;
 	height: max-content;
 	border-right: 1px dotted var(--borderColor);
-	background-color: var(--containerColor);
 }
 
 .asidetwo {
 	grid-row: 2 / 3;
 	grid-column: 3 / 4;
 	height: max-content;
+	border-left: 1px dotted var(--borderColor);
 }
 
 main {
@@ -72,18 +77,25 @@ footer {
 
 marquee {
 	height: 20px;
-	background-color: var(--containerColor);
 	border-bottom: 1px dotted var(--borderColor);
 }
 
 span.sidetitle {
-	color: var(--accentColor3);
+	clear: both;
+	display: block;
+	color: var(--text);
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px dotted var(--borderColor);
+	padding: 5px;
 }
 
 div.anime {
 	color: var(--text);
 	font-size: smaller;
-	text-align: center;
+	text-align: left;
+	grid-column: 2 / 3;
 }
 
 div.right-header {
@@ -98,7 +110,6 @@ div.right-header {
 	border-right: 1px dotted var(--borderColor);
 	border-bottom: 1px dotted var(--borderColor);
 	color: var(--accentColor5);
-	background-color: var(--containerColor);
 	text-decoration: none;
 	text-align: center;
 	width: 100%;
@@ -112,7 +123,6 @@ a:link, a:visited {
 a:hover, a:active {
 	color: var(--accentColor2);
 	text-decoration: none;
-	font-style: italic;
 }
 
 img.animecover {
@@ -126,7 +136,18 @@ img.animecover {
 }
 
 img.icon {
-	float: left;
-	width: 18%;
-	margin: 15px;
+	width: 80%;
+	margin: 10%;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	border-radius: 15px;
+	border: 3px solid var(--borderColor);
+}
+
+span.icon {
+	clear: both;
+	display: block;
+	text-align: center;
+	margin-top: 2px;
+	color: var(--accentColor);
 }
