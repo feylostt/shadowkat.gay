@@ -14,7 +14,7 @@ options = {
 // request!!
 fetch(url, options).then(handleResponse)
     .then(handleData)
-    .catch(handleCacheError);
+    .catch(handleError);
 
 function handleResponse(response) {
     return response.json().then(function (json) {
@@ -49,7 +49,7 @@ function handleData(data) {
 
 function handleCacheError(error) {
     // alert('couldn\'t get last anime watched :(');
-    fetchFromAnilist();
+    // fetchFromAnilist();
 }
 
 // in case my server isn't working :3

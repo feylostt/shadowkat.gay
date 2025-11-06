@@ -85,15 +85,16 @@
 					<script src="scripts/status.js"></script>
 					<div id="status"></div>
 				</div>
-				<div class="box" style="text-align: center;">
-					<select name="pets" id="pets">
+				<div class="box" style="text-align: center; justify-content: center; align-content: center;">
+					<select name="pets" id="pets" class="pets">
 						<option value="pat">pat</option>
 						<option value="pet">pet</option>
 						<option value="poke">poke</option>
 						<option value="boop">boop</option>
 					</select>
-					<label for="pets">it</label>
-					<button onclick="sendPet()" id="petbutton">:3</button>
+					<label for="pets">it</label><br>
+					<div id="particlearea" class="particlearea"></div>
+					<button type="button" onclick="sendPet()" id="petbutton" class="nekofern"></button>
 					<script src="scripts/pet.js"></script>
 				</div>
 			</aside>
