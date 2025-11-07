@@ -6,6 +6,8 @@ const particleBox = document.getElementById("particlearea");
 const imagePath = "imgs/other/nekofern/";
 const particles = ["heart_1.png", "heart_2.png", "heart_2.png", "colon3_.png"]
 
+let onCooldown = false;
+
 function sendPet() {
     const particle = createParticle(particleBox);
     particle.addEventListener("animationstart", function() {
@@ -14,6 +16,9 @@ function sendPet() {
         }, 1900);
     });
 
+    if(onCooldown) {
+        return;
+    }
     options = {
         method: 'GET',
         headers: {
@@ -23,11 +28,17 @@ function sendPet() {
     };
 
     var url = 'https://httpserver.shadowkat.cc/discord/pet?pets=' + document.getElementById("pets").value;
-
     // request!!
     fetch(url, options).then(handleResponse)
-        .then(handleData)
-        .catch(handleCacheError);
+        .then(cooldown)
+        .catch(console.log);
+}
+
+function cooldown() {
+    onCooldown = true;
+    setTimeout(() => {
+        onCooldown = false;
+    }, 10000)
 }
 
 function createParticle(parentElement = document.body) {
