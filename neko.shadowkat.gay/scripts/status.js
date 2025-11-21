@@ -26,18 +26,18 @@ function handleData(data) {
     let activity = data.desktop || data.mobile;
 
     if(activity == "online") {
-        document.getElementById('status').innerHTML = "it is online :3";
+        document.getElementById('status').innerHTML = `<span class="subjectPronoun">it</span> is online :3`;
     } else if(activity == "idle") {
-        document.getElementById('status').innerHTML = "it is idle :0";
+        document.getElementById('status').innerHTML = `<span class="subjectPronoun">it</span> is idle :0`;
     } else if(activity == "dnd") {
-        document.getElementById('status').innerHTML = "it is busy :(";
+        document.getElementById('status').innerHTML = `<span class="subjectPronoun">it</span> is busy :(`;
     } else {
-        document.getElementById('status').innerHTML = "it is offline :C";
+        document.getElementById('status').innerHTML = `<span class="subjectPronoun">it</span> is offline :C`;
     }
 }
 
 function handleCacheError(error) {
     // alert('couldn\'t get last anime watched :(');
-    document.getElementById('status').innerHTML = "it is offline :C";
+    document.getElementById('status').innerHTML = `<span class="subjectPronoun">it</span> is offline :C`;
     console.log(error);
 }

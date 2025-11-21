@@ -96,6 +96,8 @@ div.anime {
 	font-size: smaller;
 	text-align: left;
 	grid-column: 2 / 3;
+	margin-bottom: 2px;
+	margin-top: 2px;
 }
 
 div.right-header {
@@ -109,10 +111,60 @@ div.right-header {
 	width: auto;
 	border-right: 1px dotted var(--borderColor);
 	border-bottom: 1px dotted var(--borderColor);
-	color: var(--accentColor5);
+	color: var(--accentColor);
 	text-decoration: none;
 	text-align: center;
 	width: 100%;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link a {
+    color: var(--accentColor);
+    text-decoration: none;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.dropdown-content {
+    background-color: var(--containerColor);
+    opacity: 0%;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.25s ease-out;
+    border: 1px dotted var(--borderColor)
+}
+
+.dropdown-content a.dropdown-link {
+    box-sizing: border-box;
+    color: var(--borderColor);
+    height: 28px;
+    width: 100%;
+    border-bottom: 1px dotted var(--borderColor);
+}
+
+a.dropdown-link:hover {
+    color: var(--accentColor);
+    border-bottom: 1px dotted var(--borderColor);
+}
+
+.nav-link:hover .dropdown-content {
+    opacity: 100%;
+    height: var(--dropdownHeight);
+    border-bottom: none;
+}
+
+.dropdown:hover,
+.nav-link:hover .dropdown,
+.dropdown-content:hover ~ .dropdown {
+    color: var(--accentColor2);
 }
 
 a:link, a:visited {

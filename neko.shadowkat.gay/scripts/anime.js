@@ -32,7 +32,7 @@ function handleData(data) {
         var siteUrl = activity.media.siteUrl;
 
         if(status == 'watched episode') {
-            anime = `<a class="animetitle" href="${siteUrl}" target="_blank">${title}</a> ep ${activity.progress}`;
+            anime = `watched <a class="animetitle" href="${siteUrl}" target="_blank">${title}</a> ep ${activity.progress}`;
 
             // console.log(activity)
             document.getElementById('anime').innerHTML = anime;
