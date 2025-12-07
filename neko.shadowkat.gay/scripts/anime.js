@@ -32,13 +32,13 @@ function handleData(data) {
         var siteUrl = activity.media.siteUrl;
 
         if(status == 'watched episode') {
-            anime = `watched <a class="animetitle" href="${siteUrl}" target="_blank">${title}</a> ep ${activity.progress}`;
+            anime = `watched <a class="animetitle" href="https://anilist.co/user/shadowkatyana/animelist" target="_blank">${title}</a> ep ${activity.progress}`;
 
             // console.log(activity)
             document.getElementById('anime').innerHTML = anime;
             break;
         } else if(status == 'completed') {
-            anime = `finished <a class="animetitle" href="${siteUrl}" target="_blank">${title}</a>!`;
+            anime = `finished <a class="animetitle" href="https://anilist.co/user/shadowkatyana/animelist" target="_blank">${title}</a>!`;
 
             // console.log(activity)
             document.getElementById('anime').innerHTML = anime;
