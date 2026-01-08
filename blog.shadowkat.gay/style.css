@@ -1,0 +1,28 @@
+:root {
+	--text: #4d312d;
+	--backgroundColor: var(--containerColor);
+	--containerColor: #e0c0b9;
+	--containerColor2: #723b4e;
+	--borderColor: #723b4e;
+	--accentColor: #B55468;
+	--accentColor2: #893567;
+}
+
+html {
+	color: var(--text);
+	font-family: 'Times New Roman', Times, serif;
+	font-size: clamp(1rem, 0.5vw, 2.5rem);
+}
+
+body {
+	background-color: var(--backgroundColor);
+}
+
+.container {
+	max-width: 60em;
+	min-width: 50em;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 13em minmax(0, 1fr) 13em;
+	background: var(--containerColor);
+}
